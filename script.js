@@ -12,8 +12,8 @@ const listData = (list) => {
     
     for (let item of list) {
         let newDiv = `
-            <a href="#" id="info">
-                <img src="${item.image}">
+            <a href="#">
+                <img src="${item.image}" id="thumbnail">
             </a>`
         output.innerHTML += newDiv;  
     }
@@ -23,6 +23,6 @@ fetch(url)
 .then(response => response.json())
 .then(list => listData(list.results))
 .catch(error => {
-    console.error(error);
-    output.innerHTML = "Something went wrong..."
+    console.error(error)
+    output.innerHTML = "Something went wrong..." 
 });

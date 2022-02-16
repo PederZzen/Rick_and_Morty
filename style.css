@@ -17,12 +17,12 @@ body {
     margin: 50px auto;
 }
 
-img {
+#thumbnail {
     width: 100%;
     border-radius: 10px;
 }
 
-img:hover {
+#thumbnail:hover {
     box-shadow: 0 0 10px rgb(255, 145, 0);
 }
 
@@ -80,4 +80,11 @@ button {
     position: absolute;
     left: 20px;
     bottom: -35px;
+}
+
+#loadingIcon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
