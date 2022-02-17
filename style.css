@@ -1,4 +1,4 @@
-* {
+ * {
     padding: 0;
     margin: 0;
 }
@@ -6,11 +6,17 @@
 body {
     background-color: rgb(49, 49, 49);
     color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header a {
+    color: rgb(255, 145, 0);
+    text-decoration: none;
 }
 
 .container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     max-width: 1000px;
     justify-content: center;
@@ -29,7 +35,6 @@ body {
 h1,
 h2 {
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
     position: relative;
 }
 
@@ -87,4 +92,24 @@ button {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+} 
+
+#thumbnail {
+    width: 100px;
+    display: flex;
+    margin: 5px;
+}
+
+#info {
+    display: flex;
+    margin: 10px;
+
+}
+
+#info > div {
+    padding-left: 10px;
+}
+
+#info h1 {
+    margin-top: 0;
 }

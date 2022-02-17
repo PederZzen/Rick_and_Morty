@@ -1,23 +1,27 @@
-var url = "https://rickandmortyapi.com/api/character";
+const url = "https://rickandmortyapi.com/api/character/";
 const output = document.querySelector(".container");
 
 const lastPage = document.querySelector("#lastPage");
 const nextPage = document.querySelector("#nextPage");
 
-const listData = (list) => {
-
+function listData(list) {
     console.log(list.length);
 
     output.innerHTML = "";
-    
+
     for (let item of list) {
-        let newDiv = `
-            <a href="#">
-                <img src="${item.image}" id="thumbnail">
-            </a>`
-        output.innerHTML += newDiv;  
+        console.log(item);
+        output.innerHTML += `
+        <a href="./details.html?id=${item.id}">
+            <img src="${item.image}" id="thumbnail">
+            <div>
+                <p>${item.name}</p>
+                <p>${item.origin.name}</p>
+            </div>
+        </a>`
     }
 }
+
 
 fetch(url)
 .then(response => response.json())
