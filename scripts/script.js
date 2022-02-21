@@ -9,11 +9,11 @@ function listData(list) {
     for (let item of list) {
         console.log(item);
         output.innerHTML += `
-        <a href="./details.html?id=${item.id}">
+        <a href="./details.html?id=${item.id}" class="main-page-cards">
             <img src="${item.image}" id="thumbnail">
             <div>
                 <p>${item.name}</p>
-                <p>${item.origin.name}</p>
+                <p>${item.status}</p>
             </div>
         </a>`
     }
