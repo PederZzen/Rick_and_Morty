@@ -66,6 +66,9 @@ function formValidator (e) {
         console.error("Address must have a minimum length of 25");
         addressError.innerHTML = "* Address must have a minimum length of 25 digits";
         validAddress = false;
+    } 
+    if (enteredAddress = "") {
+        validAddress = true;    
     } else {
         validAddress = true;
     }
@@ -89,5 +92,16 @@ function formValidator (e) {
 
         form.submit();
 
+        bannerFunction();
     } 
 }
+
+let bannerFunction = () => {
+
+    let banner = document.querySelector("#emptyBanner")
+    banner.innerHTML = "Form was submitted!"
+    banner.classList.add("banner")
+}
+
+
+// Lureri i formet! Trenger ikke addresse eller subject??

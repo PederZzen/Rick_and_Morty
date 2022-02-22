@@ -24,8 +24,8 @@ function fetchAPI () {
     .then(response => response.json())
     .then(list => listData(list.results))
     .catch(error => {
-        console.error(error)
-        output.innerHTML = "Something went wrong..." 
+        console.error(error);
+        output.innerHTML = "Something went wrong...";
     });    
 }
 
