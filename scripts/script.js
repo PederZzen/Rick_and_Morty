@@ -19,8 +19,22 @@ function listData(list) {
     }
 }
 
+const lastPage = document.querySelector("#back");
+const nextPage = document.querySelector("#next");
+
+let page = 1;
+
+nextPage.addEventListener("click", () => {
+
+    page++;
+
+    console.log(page);
+
+    fetchAPI();
+})
+
 function fetchAPI () {
-    fetch(url)
+    fetch(url + "/?page=" + page)
     .then(response => response.json())
     .then(list => listData(list.results))
     .catch(error => {
@@ -30,22 +44,4 @@ function fetchAPI () {
 }
 
 fetchAPI()
-
-
-const lastPage = document.querySelector("#back");
-const nextPage = document.querySelector("#next");
-
-let page = 0;
-
-nextPage.addEventListener("click", () => {
-    
-    page++;
-
-    url = `${url}?page=${page}`
-
-    console.log(page);
-
-    fetchAPI()
-
-})
 
