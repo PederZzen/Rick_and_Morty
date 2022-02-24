@@ -19,29 +19,11 @@ function listData(list) {
     }
 }
 
-const lastPage = document.querySelector("#back");
-const nextPage = document.querySelector("#next");
-
-let page = 1;
-
-nextPage.addEventListener("click", () => {
-
-    page++;
-
-    console.log(page);
-
-    fetchAPI();
-})
-
-function fetchAPI () {
-    fetch(url + "/?page=" + page)
-    .then(response => response.json())
-    .then(list => listData(list.results))
-    .catch(error => {
-        console.error(error);
-        output.innerHTML = "Something went wrong...";
-    });    
-}
-
-fetchAPI()
+fetch(url)
+.then(response => response.json())
+.then(list => listData(list.results))
+.catch(error => {
+    console.error(error);
+    output.innerHTML = "Something went wrong...";
+});    
 

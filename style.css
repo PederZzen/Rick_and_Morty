@@ -62,32 +62,6 @@ a {
     transform-origin: left;
 }
 
-.changePageBtns {
-    position: relative;
-}
-
-.changePageBtns button {
-    background-color: transparent;
-    color: var(--color3);
-    border: none;
-    font-size: 1.1rem;
-    top: -40px;
-    position: absolute;
-    cursor: pointer;
-}
-
-.changePageBtns button:hover {
-    font-size: 1.12rem;
-}
-
-#next {
-    right: 20px;
-}
-
-#previous {
-    left: 10px;
-}
-
 /* Main Page */
 
 h1,
@@ -124,7 +98,7 @@ h2::before {
 }
 
 header {
-    margin: 100px;
+    margin: 70px;
 }
 
 .main-page-container {
@@ -244,7 +218,7 @@ header {
 input[type=submit] {
     width: 80px;
     padding: 5px;
-    margin-top: 10px;
+    margin-top: 20px;
     background-color: var(--color1);
     color: var(--color2);
     border-radius: 2px;
@@ -277,15 +251,4 @@ input[type=submit]:hover {
     left: 50%;
     transform: translateX(-50%);
     bottom: -10px;
-}
-
-.banner {
-    background-color: rgb(167, 255, 167);
-    color: var(--color2);
-    font-size: 1.3rem;
-    text-align: center;
-    padding: 10px;
-    position: absolute;
-    top: -80px;
-    width: 100%;
 }
