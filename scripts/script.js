@@ -26,4 +26,3 @@ fetch(url)
     console.error(error);
     output.innerHTML = "Something went wrong...";
 });    
-
