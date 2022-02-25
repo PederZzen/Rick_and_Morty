@@ -90,11 +90,7 @@ function formValidator (e) {
 
     if (validName == true && validEmail == true && validSubject == true && validAddress == true)  {
 
-        let banner = document.querySelector("#emptyBanner");
-        banner.innerHTML = "Form was submitted!";
-        banner.classList.add("banner");
-
-        form.submit();
+        form.submit(); 
 
     } 
 }
