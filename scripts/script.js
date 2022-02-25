@@ -14,7 +14,7 @@ function listData(list) {
             <div>
                 <p>${item.name}</p>
                 <p>${item.status}</p>
-            </div>
+            </div> 
         </a>`
     }
 }
