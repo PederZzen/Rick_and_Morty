@@ -2,7 +2,7 @@ var url = "https://rickandmortyapi.com/api/character";
 const output = document.querySelector(".main-page-container");
 
 function listData(list) {
-    console.log(list.length);
+    // console.log(list.length);
 
     output.innerHTML = "";
 
