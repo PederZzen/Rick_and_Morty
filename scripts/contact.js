@@ -18,32 +18,28 @@ function formValidator (e) {
     let validSubject = true;
     let validAddress = true;
 
+    nameError.innerHTML = "&nbsp";
+    emailError.innerHTML = "&nbsp";
+    addressError.innerHTML = "&nbsp";
+    subjectError.innerHTML = "&nbsp";
+
     e.preventDefault();
 
     // Name validation
+    
     let enteredName = nameInput.value.trim();
     console.log("Name: " + enteredName);
 
-    if (enteredName.length < 2) {
-        console.error("Name is to short");
-        nameError.innerHTML = "* Name is to short";
-        validName = false;
-    } 
     if (enteredName == "") {
         console.error("Name must be filled out");
         nameError.innerHTML = "* Name must be filled out";
         validName = false;
-    }
-    if (/\d/.test(enteredName)) {
-        console.error("Name cannot contain any digits.. Unless you are the child of Elon Musk?");
-        nameError.innerHTML = "* Name cannot contain any digits";
-        validName = false;
-
     } else {
         validName = true;
     }
 
     // Email validation
+
     let enteredEmail = emailInput.value.trim();
     console.log("Email: " + enteredEmail);
 
@@ -66,16 +62,13 @@ function formValidator (e) {
         console.error("Address must have a minimum length of 25");
         addressError.innerHTML = "* Address must have a minimum length of 25 digits";
         validAddress = false;
-    } 
-    if (enteredAddress = "") {
-        validAddress = true;    
     } else {
         validAddress = true;
     }
 
     // Subject validation
 
-    let enteredSubject = subjectInput.value;
+    let enteredSubject = subjectInput.value.trim();
     console.log("Subject: " + enteredSubject);
 
     if (enteredSubject.length < 10) {
@@ -90,7 +83,9 @@ function formValidator (e) {
 
     if (validName == true && validEmail == true && validSubject == true && validAddress == true)  {
 
-        form.submit(); 
+        document.querySelector("#emptyBanner").classList.add("banner");
+        document.querySelector("#emptyBanner").innerHTML = "Form passed validation!"
 
+        // form.submit(); 
     } 
 }
