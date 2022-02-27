@@ -252,15 +252,3 @@ input[type=submit]:hover {
     transform: translateX(-50%);
     bottom: -10px;
 }
-
-.banner {
-    position: absolute;
-    top: -65px;
-    width: 100%;
-    text-align: center;
-    padding: 5px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px var(--color1);
-    color: var(--color2);
-    background-color: var(--color1);
-}

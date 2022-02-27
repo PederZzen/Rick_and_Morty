@@ -83,9 +83,7 @@ function formValidator (e) {
 
     if (validName == true && validEmail == true && validSubject == true && validAddress == true)  {
 
-        document.querySelector("#emptyBanner").classList.add("banner");
-        document.querySelector("#emptyBanner").innerHTML = "Form passed validation!"
+        form.submit(); 
 
-        // form.submit(); 
     } 
 }
