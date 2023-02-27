@@ -1,1 +1,3 @@
-# Rick and Morty API Fetch
+# Rick and Morty API
+
+## A simple test of fetch method with vanilla JavaScript

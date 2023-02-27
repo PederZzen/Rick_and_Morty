@@ -21,7 +21,6 @@ fetch (url)
   .finally(document.querySelector("#loadingIcon").style.display = "none");
 
 function listData(data) {
-
     document.title = data.name;
 
     output.innerHTML += `
