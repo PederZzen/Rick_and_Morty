@@ -1,1 +1,1 @@
-# JavaScript1_CA
+# Rick and Morty API Fetch
